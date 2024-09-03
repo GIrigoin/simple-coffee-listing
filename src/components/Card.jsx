@@ -9,11 +9,39 @@ const Card = ({ info }) => {
       <img className="mb-2 rounded-lg" src={info.image} alt={info.name} />
       <section className="flex flex-row justify-between">
         <p className="text-body font-bold text-main-text">{info.name}</p>
-        <p>{info.price}</p>
+        <p className="w-12 rounded bg-price-bg py-1 text-center text-price font-bold text-page-bg">
+          {info.price}
+        </p>
       </section>
-      <section>
-        <div></div>
-        {!info.available && <p>Sold out</p>}
+      <section className="my-2 flex flex-row justify-between">
+        <div className="flex flex-row justify-start">
+          {info.votes === 0 ? (
+            <img
+              className="mr-1"
+              src={"../src/assets/Star.svg"}
+              alt="No Ratings"
+            />
+          ) : (
+            <img
+              className="mr-1"
+              src={"../src/assets/Star_fill.svg"}
+              alt={info.rating}
+            />
+          )}
+          {info.votes === 0 ? (
+            <p className="text-body font-bold text-secondary-text">
+              No ratings
+            </p>
+          ) : (
+            <p className="text-body font-bold text-main-text">
+              {info.rating}
+              <span className="text-secondary-text">{` (${info.votes} votes)`}</span>
+            </p>
+          )}
+        </div>
+        {!info.available && (
+          <p className="text-label font-bold text-sold-out">Sold out</p>
+        )}
       </section>
     </div>
   );

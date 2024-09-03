@@ -68,7 +68,7 @@ const Cards = () => {
           </span>
         </label>
       </section>
-      <section className="flex flex-row flex-wrap justify-start align-top">
+      <section className="flex flex-row flex-wrap justify-center align-top">
         {displayList.length > 0 ? (
           displayList.map((element) => {
             return <Card key={element.id} info={{ ...element }} />;
