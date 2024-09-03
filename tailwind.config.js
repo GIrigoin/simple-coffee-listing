@@ -24,6 +24,7 @@ export default {
       },
       backgroundImage: {
         "coffee-bg": "url('./src/assets/bg-cafe.jpg')",
+        "heading-bg": "url('./src/assets/vector.svg')",
       },
     },
   },
