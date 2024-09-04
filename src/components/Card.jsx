@@ -1,3 +1,6 @@
+import starImg from "../assets/Star.svg";
+import starFilledImg from "../assets/Star_fill.svg";
+
 const Card = ({ info }) => {
   return (
     <div className="relative mx-4 mb-12 w-[16.25rem]">
@@ -16,17 +19,9 @@ const Card = ({ info }) => {
       <section className="my-2 flex flex-row justify-between">
         <div className="flex flex-row justify-start">
           {info.votes === 0 ? (
-            <img
-              className="mr-1"
-              src={"../src/assets/Star.svg"}
-              alt="No Ratings"
-            />
+            <img className="mr-1" src={starImg} alt="No Ratings" />
           ) : (
-            <img
-              className="mr-1"
-              src={"../src/assets/Star_fill.svg"}
-              alt={info.rating}
-            />
+            <img className="mr-1" src={starFilledImg} alt={info.rating} />
           )}
           {info.votes === 0 ? (
             <p className="text-body font-bold text-secondary-text">

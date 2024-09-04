@@ -23,8 +23,8 @@ export default {
         DM: ["DM Sans", "sans-serif"],
       },
       backgroundImage: {
-        "coffee-bg": "url('./src/assets/bg-cafe.jpg')",
-        "heading-bg": "url('./src/assets/vector.svg')",
+        "coffee-bg": "url('./assets/bg-cafe.jpg')",
+        "heading-bg": "url('./assets/vector.svg')",
       },
     },
   },
